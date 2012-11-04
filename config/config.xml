@@ -1,0 +1,7 @@
+<object-stream>
+  <org.akritiko.misslemon.util.ConfigMissLemon>
+    <configFolderPath>config</configFolderPath>
+    <configFilePath>config/config.xml</configFilePath>
+    <calendarAlertsPath>config/calendar.xml</calendarAlertsPath>
+  </org.akritiko.misslemon.util.ConfigMissLemon>
+</object-stream>
