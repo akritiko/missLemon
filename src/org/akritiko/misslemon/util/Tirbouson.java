@@ -6,13 +6,24 @@ import java.io.IOException;
 
 import org.akritiko.misslemon.entities.LemonFileOrApplication;
 
+/**
+ * Tirbouson is the standard way of MissLemon to open files or applications 
+ * regardless of the operating system the machine runs on.
+ * 
+ * Filetypes supported: 
+ *  - ...
+ * 
+ * @version 1.0.0, 05 Jan 2013
+ * @author Apostolos Kritikos <akritiko@gmail.com>
+ *
+ */
 public class Tirbouson {
 
 	public Tirbouson() {
 
 	}
 
-	public boolean openAplication(LemonFileOrApplication lm) {
+	public boolean openApplication(LemonFileOrApplication lm) {
 		String finalCommand = "";
 
 		try {

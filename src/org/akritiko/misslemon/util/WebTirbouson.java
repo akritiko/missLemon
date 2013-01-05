@@ -5,19 +5,22 @@ import javax.swing.JOptionPane;
 import java.util.Arrays;
 
 /**
- * <b>Bare Bones Browser Launch for Java</b><br>
- * Utility class to open a web page from a Swing application in the user's
- * default browser.<br>
- * Supports: Mac OS X, GNU/Linux, Unix, Windows XP/Vista<br>
- * Example Usage:<code><br> &nbsp; &nbsp;
- *    String url = "http://www.google.com/";<br> &nbsp; &nbsp;
- *    BareBonesBrowserLaunch.openURL(url);<br></code> Latest Version: <a
- * href="http://www.centerkey.com/java/browser/"
- * >www.centerkey.com/java/browser</a><br>
- * Author: Dem Pilafian<br>
- * Public Domain Software -- Free to Use as You Like
+ * Bare Bones Browser Launch for Java Utility class to open a web page from a
+ * Swing application in the user's default browser. Supports: Mac OS X,
+ * GNU/Linux, Unix, Windows XP/Vista.
  * 
- * @version 2.0, May 26, 2009
+ * @version 3.0.0, 05 Jan 2013
+ * @author Apostolos Kritikos <akritiko@gmail.com>
+ * 
+ *         SOURCE CODE ORIGINALLY CREATD BY:
+ * 
+ * @author Dem Pilafian
+ * @version 2.0.0, 26 May 2009
+ * 
+ *          AND FOUND AT: http://www.centerkey.com/java/browser/
+ * 
+ *          UNDER: Public Domain Software
+ * 
  */
 public class WebTirbouson {
 
@@ -29,18 +32,17 @@ public class WebTirbouson {
 	 * Opens the specified web page in a web browser
 	 * 
 	 * @param url
-	 *            A web address (URL) of a web page (ex:
-	 *            "http://www.google.com/")
+	 *            A web address (URL) of a web page 
+	 *            (e.g. "http://www.google.com/")
 	 */
 	public static void openURL(String url) {
-		String osName = System.getProperty("os.name");
 		try {
-			if (osName.startsWith("Mac OS")) {
+			if (OSDetector.isMac()) {
 				Class<?> fileMgr = Class.forName("com.apple.eio.FileManager");
 				Method openURL = fileMgr.getDeclaredMethod("openURL",
 						new Class[] { String.class });
 				openURL.invoke(null, new Object[] { url });
-			} else if (osName.startsWith("Windows"))
+			} else if (OSDetector.isWindows())
 				Runtime.getRuntime().exec(
 						"rundll32 url.dll,FileProtocolHandler " + url);
 			else { // assume Unix or Linux
@@ -54,13 +56,15 @@ public class WebTirbouson {
 							Runtime.getRuntime().exec(
 									new String[] { browser, url });
 					}
-				if (!found)
+				if (!found) {
+					//TODO: Write to MissLemon log
 					throw new Exception(Arrays.toString(browsers));
+				}
 			}
 		} catch (Exception e) {
+			//TODO: Write to MissLemon log
 			JOptionPane.showMessageDialog(null,
 					"Error attempting to launch web browser\n" + e.toString());
 		}
 	}
-
 }
