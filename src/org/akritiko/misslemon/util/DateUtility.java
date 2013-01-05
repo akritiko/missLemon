@@ -7,8 +7,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @author krap
- *
+ * DateUtility create Date objects with specific format(s)
+ * 
+ * @version 1.0.0, 05/01/2013
+ * @author Apostolos Kritikos <akritiko@gmail.com>
  */
 public class DateUtility {
 	
@@ -16,6 +18,7 @@ public class DateUtility {
 	private String theDate;
 
 	public DateUtility(Date date) {
+		//Default formatter: 05 Jan 2013, 01:42:00
 		formatter = new SimpleDateFormat("dd MMM yyyy, HH:mm:ss");
 		this.theDate = formatter.format(date);
 	}

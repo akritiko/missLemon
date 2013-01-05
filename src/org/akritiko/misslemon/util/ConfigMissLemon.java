@@ -3,17 +3,25 @@ package org.akritiko.misslemon.util;
 import java.io.File;
 
 /**
- * The ConfigLogMerger class provides a pool for directory locations (paths)
- * that are important for the LogMerger Service. Works like a properties file
+ * ConfigMissLemon provides a pool for directory locations (paths)
+ * that are important for Miss Lemon's work. Works like a properties file
  * only with enhanced functionality
  * 
- * @version 1.0, 03 Aug 2009
- * @author Apostolos Kritikos (CERTH - ITI)
- * @author Symeon Papadopoulos (CERTH - ITI)
+ * @version 2.0.0, 05 Jan 2013
+ * @version 1.0.0, 03 Aug 2009
+ * 
+ * THIS SOURCE CODE WAS ORIGINALLY CREATED BY: 
+ * 
+ * @author Apostolos Kritikos <akritiko@gmail.com>
+ * @author Symeon Papadopoulos <papadop@iti.gr>
+ * 
+ * AS PART OF THE EU FUNDED PROJECT WeKnowIt (http://www.weknowit.eu) on
+ * behalf of the Informatics and Telematics Institute (http://www.iti.gr), 
+ * Centre of Research and Technology Hellas (http://www.certh.gr/root.en.aspx)
+ * 
  */
 public class ConfigMissLemon {
 
-	/** The config log merger object */
 	private volatile static ConfigMissLemon config = null;
 
 	//TODO: Create mechanism to initialize .xml files and folder config if they do not exist!
@@ -22,9 +30,6 @@ public class ConfigMissLemon {
 	private String configFilePath;
 	private String xmlFolderPath;
 
-	/**
-	 * Class constructor
-	 */
 	public ConfigMissLemon() {
 		
 		configFolderPath = "config";
@@ -33,7 +38,7 @@ public class ConfigMissLemon {
 	}
 
 	/**
-	 * Returns a ConfigLogMerger object which can be used to get all the
+	 * Returns a ConfigMissLemon object which can be used to get all the
 	 * information stored to the attributes of this class
 	 * 
 	 * @return an instance of ConfigLogMerger

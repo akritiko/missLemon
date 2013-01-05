@@ -4,8 +4,15 @@
 package org.akritiko.misslemon.util;
 
 /**
- * @author krap
+ * Mailman creates and sends e-mail messages using gmail smtp 
+ * protocol.
+ * 
+ * @version 1.0.0, 05 Jan 2013
+ * @author Apostolos Kritikos <akritiko@gmail.com>
  *
+ * SOURCE CODE WAS ORIGINALLY FOUND ON:
+ * http://www.javabeat.net/2007/10/sending-mail-from-java/
+ * 
  */
 
 import java.util.Properties;
@@ -56,7 +63,6 @@ public class Mailman {
 			fromAddress = new InternetAddress(from);
 			toAddress = new InternetAddress(to);
 		} catch (AddressException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -68,7 +74,6 @@ public class Mailman {
 
 			Transport.send(simpleMessage);
 		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

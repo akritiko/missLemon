@@ -1,5 +1,18 @@
 package org.akritiko.misslemon.util;
 
+/**
+ * OSDetector detects the type of the operating system of the
+ * machine running Miss Lemon
+ * 
+ * @version 1.0.0, 05 Jan 2013
+ * @author Apostolos Kritikos <akritiko@gmail.com>
+ * 
+ * SOURCE CODE ORIGINALLY FOUND ON:
+ * http://www.mkyong.com/java/how-to-detect-os-in-java-systemgetpropertyosname/
+ *
+ */
+
+
 public class OSDetector {
 
 	private static boolean isWindows = false;

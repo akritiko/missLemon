@@ -7,7 +7,12 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 
 /**
- * @author krap
+ * Provides machine specific information. 
+ *  - Screen width
+ *  - Screen height
+ * 
+ * @version 1.0.0, 05 Jan 2013 
+ * @author Apostolos Kritikos <akritiko@gmail.com>
  *
  */
 public class MachineUtility {

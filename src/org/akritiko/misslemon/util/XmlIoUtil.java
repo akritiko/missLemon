@@ -20,8 +20,17 @@ import com.thoughtworks.xstream.XStream;
  * that can be used for serializing and de-serializing POJOs
  * to and from XML files respectively.
  * 
- * @version 1.0 01/12/2008
- * @author papadop
+ * @version 2.0.0, 05 Jan 2013
+ * @version 1.0.0, 01 Dec 2008
+ * 
+ * THIS SOURCE CODE WAS ORIGINALLY CREATED BY: 
+ * 
+ * @author Apostolos Kritikos <akritiko@gmail.com>
+ * @author Symeon Papadopoulos <papadop@iti.gr>
+ * 
+ * AS PART OF THE EU FUNDED PROJECT WeKnowIt (http://www.weknowit.eu) on
+ * behalf of the Informatics and Telematics Institute (http://www.iti.gr), 
+ * Centre of Research and Technology Hellas (http://www.certh.gr/root.en.aspx)
  */
 public class XmlIoUtil {
 
